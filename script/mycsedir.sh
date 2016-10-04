@@ -1,3 +1,3 @@
 #! /bin/bash
 
-mkdir ~/mycsescriptdir
+sudo mkdir ~/mycsescriptdir
