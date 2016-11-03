@@ -45,8 +45,11 @@ DEST="/home/cddemo/angular-app"
 
 echo " "
 echo "Getting updated files from: $SOURCE"
+echo "sudo curl -o "$TMP/config.js" $SOURCE/config.js"
 sudo curl -o "$TMP/config.js" $SOURCE/config.js
+echo "sudo curl -o "$TMP/header.tpl.html" $SOURCE/header.tpl.html"
 sudo curl -o "$TMP/header.tpl.html" $SOURCE/header.tpl.html
+echo "sudo curl -o "$TMP/app.js" $SOURCE/app.js"
 sudo curl -o "$TMP/app.js" $SOURCE/app.js
 
 # update the database_name value
@@ -66,7 +69,7 @@ sudo sed -i -u s/DATABASE_NAME/$DBNAME/g $TMP/app.js
 
 echo " "
 echo "updating application name"
-sudo sed -i -u s/APP_NAME//$APPNAME/g $TMP/header.tpl.html
+sudo sed -i -u s/APP_NAME/$APPNAME/g $TMP/header.tpl.html
 sudo cp $TMP/app.js $DEST/client/src/app/app.js 
 sudo cp $TMP/header.tpl.html $DEST/client/src/app/header.tpl.html 
 
