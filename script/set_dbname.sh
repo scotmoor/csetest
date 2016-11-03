@@ -15,6 +15,8 @@ echo " "
 # parse the custom data string
 declare -a PARAMS=(${CUSTOM_DATA//;/ })
 
+DBNAME="ademodb"
+APPNAME="APP APP"
 #echo ${PARAMS[0]}
 #echo ${PARAMS[1]}
 
