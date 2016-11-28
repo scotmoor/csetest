@@ -8,8 +8,8 @@ if [[ -z "$CUSTOM_DATA" ]]; then
    exit 0
 fi
 
+echo $CUSTOM_DATA
+
 sudo stop hello-karyon-rxnetty
 
-export USERDATA=$CUSTOM_DATA
-
-sudo start hello-karyon-rxnetty
+sudo start hello-karyon-rxnetty CUSTOMDATA=$CUSTOM_DATA
